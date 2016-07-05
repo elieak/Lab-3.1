@@ -8,7 +8,6 @@ namespace AccountsLib
         public int ID => _id;
 
         private double _balance;
-        public double Balance => _balance;
 
         internal Account(int accId)
         {
