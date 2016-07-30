@@ -18,6 +18,7 @@ namespace AccountsLib
         }
 
         //It isn't good to write console messages in business data. Remember that this is a class library that can be loaded in an app that isn't a console applicaoin.
+        //What if depositeAmount is negative?
         public void Deposit(double depositAmount)
         {
             _balance += depositAmount;
