@@ -5,6 +5,8 @@ namespace AccountsLib
     public class Account
     {
         private int _id;
+
+        //Nice.
         public int ID => _id;
 
         private double _balance;
@@ -15,12 +17,14 @@ namespace AccountsLib
             _id = accId;
         }
 
+        //It isn't good to write console messages in business data. Remember that this is a class library that can be loaded in an app that isn't a console applicaoin.
         public void Deposit(double depositAmount)
         {
             _balance += depositAmount;
             Console.WriteLine($"New account {_id} balance after deposit is: {_balance}");
         }
 
+        //How would you unit test this?
         public void Withdraw(double withdrawAmount)
         {
             if (withdrawAmount > _balance)
